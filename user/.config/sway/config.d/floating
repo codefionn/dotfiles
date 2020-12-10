@@ -1,2 +1,4 @@
-for_window [title=" - Mozilla Firefox"] floating enable
-for_window [title="^Nextcloud$"] floating enable
+for_window {
+	[title=" - Mozilla Firefox"] floating enable
+	[title="^Nextcloud$"] floating enable
+}
