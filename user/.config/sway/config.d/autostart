@@ -1,0 +1,12 @@
+# Does this do anything ?!
+exec export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+
+# Desktop Notifications
+#exec_always dunst
+exec_always mako
+
+exec firefox
+exec_always bash -c "pgrep cmus || tmux -2 new -c /mnt/PassportFionn/Music -s cmus -d cmus"
+exec_always --no-startup-id pulseaudio -D
+exec_always piactl connect
+exec nextcloud --background

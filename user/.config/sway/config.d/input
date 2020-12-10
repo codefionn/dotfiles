@@ -1,0 +1,5 @@
+input "type:keyboard" {
+	xkb_layout us,de
+	xkb_variant ,nodeadkeys
+	xkb_options grp:alt_shift_toggle
+}

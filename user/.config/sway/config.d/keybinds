@@ -1,0 +1,14 @@
+bindsym $mod+F1 exec $term -e tmux a -t cmus
+
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec palyerctl play-pause
+bindsym XF86AudioStop exec palyerctl stop
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec palyerctl previous
+
+# Screenshot to clipboard
+bindsym $mod+Print exec grim -g "$(slurp -d)" - | wl-copy
